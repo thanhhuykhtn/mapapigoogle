@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Geocoding service</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #floating-panel {
+            position: absolute;
+            top: 10px;
+            left: 25%;
+            z-index: 5;
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #999;
+            text-align: center;
+            font-family: 'Roboto', 'sans-serif';
+            line-height: 30px;
+            padding-left: 10px;
+        }
+        
+        .mg-5 {
+            margin-left: 5px;
+        }
+        
+        .col-sm-3 {
+            float: right;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6" style="
+            margin-top: 20px">
+                <div class="form-group">
+                    <label>Kinh độ | vĩ độ</label>
+                    <input id="lng-lat" class="form-control" disabled type="textbox" placeholder="Kinh độ | Vĩ độ">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div id="floating-panel">
+                    <input id="address" type="textbox" placeholder="Nhập địa chỉ">
+                    <input id="find" type="button" value="Tìm" class="btn btn-danger">
+                </div>
+                <div id="map" style="min-height:800px;"></div>
+            </div>
+            <div class="col-sm-3" style="width : 50%">
+                <ul id="list-location" style="overflow:auto" class="list-group">
+                    <li class="list-group-item active">Danh sách địa điểm</li>
+                </ul>
+            </div>
+            <div class="col-sm-3" style="width : 50%">
+                <ul id="list-media" style="overflow:auto" class="list-group">
+                    <li class="list-group-item active">Danh sách Media</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/javascripts/custom.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEmofg4gBoTPjizXF7JvARpTDQFIZp1sA&callback=initMap">
+    </script>
+</body>
+
+</html>

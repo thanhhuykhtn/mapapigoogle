@@ -1,0 +1,19 @@
+{
+  "name": "geocodingmapsapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "node-geocoder": "^3.21.0",
+    "prettyjson": "^1.2.1",
+    "request-promise": "^4.2.2",
+    "urlencode": "^1.1.0"
+  }
+}
